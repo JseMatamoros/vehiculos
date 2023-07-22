@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="infinite-container" style="background-color: #fae1d8;">
+        <h1 class="text-center">Software de Gestión de Vehículos</h1>
+    <p class="text-center">Bienvenido al software de gestión de vehículos de nuestra empresa. <br> Este software te permite administrar y visualizar nuestro catálogo de vehículos de manera fácil y eficiente.</p>
+    
+    <h2 class="text-center">Cómo utilizar el software</h2>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h4>Para el administrador:</h4>
+            <ul>
+                <li>Accede a la opción "Administrador" e inicia sesión con tus credenciales de administrador.</li>
+                <li>Desde el panel de administración, puedes otorgar permisos especiales a los usuarios, como la capacidad de agregar o modificar registros de vehículos.</li>
+            </ul>
+        </div>
+        <div class="col-md-6 offset-md-3">
+            <h4>Para los vendedores:</h4>
+            <ul>
+                <li>Inicia sesión con tus credenciales de vendedor.</li>
+                <li>Una vez iniciada la sesión, podrás listar todos los vehículos existentes en nuestro catálogo.</li>
+                <li>Ten en cuenta que como vendedor, no podrás realizar modificaciones en los registros de vehículos, solo podrás visualizar la información.</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+{% endblock %}
+

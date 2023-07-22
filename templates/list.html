@@ -1,0 +1,26 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="text-center">Listado de Vehículos</h1>
+    <div class="row">
+        {% for vehiculo in vehiculos %}
+            <div class="col-md-4 py-3">
+                <div class="card m-2 mb-5" style="background-color: #fae1d8;">
+                    <img src="{{ MEDIA_URL }}{{ vehiculo.imagen.url }}" class="card-img-top" alt="Imagen del vehículo">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ vehiculo.marca }}</h5>
+                        <p class="card-text">{{ vehiculo.modelo }}</p>
+                        <p class="card-text">Serial Carrocería: {{ vehiculo.serial_carroceria }}</p>
+                        <p class="card-text">Serial Motor: {{ vehiculo.serial_motor }}</p>
+                        <p class="card-text">Categoría: {{ vehiculo.categoria }}</p>
+                        <p class="card-text">Precio: {{ vehiculo.precio }}</p>
+                        {% if user.is_authenticated %}
+                            <p class="card-text">Condición de precio: {{ vehiculo.condicion_precio }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

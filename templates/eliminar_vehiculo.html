@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="text-center">Eliminar Vehículo</h1>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <p>Estás a punto de eliminar el siguiente vehículo:</p>
+            <ul>
+                <li>Marca: {{ vehiculo.marca }}</li>
+                <li>Modelo: {{ vehiculo.modelo }}</li>
+                <li>Serial Carrocería: {{ vehiculo.serial_carroceria }}</li>
+                <li>Serial Motor: {{ vehiculo.serial_motor }}</li>
+                <li>Categoría: {{ vehiculo.categoria }}</li>
+                <li>Precio: {{ vehiculo.precio }}</li>
+            </ul>
+            <p>¿Estás seguro de que deseas eliminar este vehículo?</p>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Eliminar</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Agregar Vehículo</h1>
+<form method="POST" action="{% url 'vehiculo_add' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-secondary">Enviar</button>
+</form>
+
+{% endblock %}
+
+
+
